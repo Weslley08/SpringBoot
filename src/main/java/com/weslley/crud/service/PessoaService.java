@@ -21,19 +21,16 @@ public class PessoaService implements PessoaInterfaceService {
 
 	@Override
 	public Optional<Pessoa> listarPeloId(int Id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public int salvar(Pessoa p) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public void apagar(int id) {
-		// TODO Auto-generated method stub
 		
 	}
 
