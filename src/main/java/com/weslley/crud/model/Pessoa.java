@@ -1,57 +1,27 @@
 package com.weslley.crud.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Table;
 import javax.persistence.Id;
 
+import lombok.Data;
+
 @Entity
-@Table(name = "pessoa")
-
+@Data
 public class Pessoa {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	private int id;
+	@Column(unique = true, nullable = false)
+	private String cpf;
+
+	@Column(nullable = false)
 	private String nome;
+
+	@Column(nullable = false)
 	private String telefone;
-	
-	//Criando construtor
-	public Pessoa(int id, String nome, String telefone) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.telefone = telefone;
-	}
-
-	//Gerando getter e setter de ID
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	//Gerando getter e setter de NOME
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	//Gerando getter e setter de TELEFONE
-	public String getTelefone() {
-		return telefone;
-	}
-
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-	
-	 
-	
 }
